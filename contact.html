@@ -66,8 +66,7 @@
 
         <!-- LEFT COLUMN — Contact Form -->
         <div class="contact-form">
-          <!-- NOTE: Set up a free Formspree account at https://formspree.io and replace YOUR_FORM_ID with your actual form endpoint ID -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form id="contact-form">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -97,7 +96,6 @@
                 <option value="Office / Professional Space">Office / Professional Space</option>
                 <option value="Warehouse / Manufacturing">Warehouse / Manufacturing</option>
                 <option value="Community Events">Community Events</option>
-                <option value="Investment Inquiry">Investment Inquiry</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -114,10 +112,10 @@
           <!-- Leasing Inquiries -->
           <div style="margin-bottom:2rem;">
             <h3 style="margin-bottom:1rem;">Leasing Inquiries</h3>
-            <p style="font-weight:600;color:var(--navy);margin-bottom:0.25rem;">Matt Fistonich</p>
-            <p style="color:var(--medium-gray);margin-bottom:0.75rem;">CEO, Cedarwood Asset Management</p>
-            <p style="margin-bottom:0.4rem;">&#128222; <a href="tel:+16192545642">(619) 254-5642</a></p>
-            <p>&#9993; <a href="mailto:mattf@cedarwam.com">mattf@cedarwam.com</a></p>
+            <p style="font-weight:600;color:var(--navy);margin-bottom:0.25rem;">Vanessa Rebentisch</p>
+            <p style="color:var(--medium-gray);margin-bottom:0.75rem;">Executive Director, Springfield On The Move</p>
+            <p style="margin-bottom:0.4rem;">&#128222; <a href="tel:+18028851527">(802) 885-1527</a></p>
+            <p>&#9993; <a href="mailto:springfieldonthemove@gmail.com">springfieldonthemove@gmail.com</a></p>
           </div>
 
           <!-- Property Address -->
@@ -131,7 +129,7 @@
           <div style="margin-bottom:2rem;padding-top:2rem;border-top:1px solid var(--light-gray);">
             <h3 style="margin-bottom:1rem;">Schedule a Tour</h3>
             <p style="color:var(--slate);margin-bottom:1.25rem;">We offer in-person and virtual tours of available spaces. Call or email to arrange a walkthrough at a time that works for you.</p>
-            <a href="tel:+16192545642" class="btn btn-dark">Call to Schedule</a>
+            <a href="tel:+18028851527" class="btn btn-dark">Call to Schedule</a>
           </div>
 
           <!-- Office Hours -->
@@ -191,8 +189,8 @@
         <div class="footer-contact">
           <h4>Contact</h4>
           <p>&#128205; 100 River Street<br>Springfield, VT 05156</p>
-          <p>&#128222; <a href="tel:+16192545642">(619) 254-5642</a></p>
-          <p>&#9993; <a href="mailto:mattf@cedarwam.com">mattf@cedarwam.com</a></p>
+          <p>&#128222; <a href="tel:+18028851527">(802) 885-1527</a></p>
+          <p>&#9993; <a href="mailto:springfieldonthemove@gmail.com">springfieldonthemove@gmail.com</a></p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -203,5 +201,14 @@
   </footer>
 
   <script src="js/main.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var g=function(id){var el=document.getElementById(id);return el?el.value:''};
+  var subject='100 River Street Inquiry — '+(g('interest')||'General')+' — '+g('first-name')+' '+g('last-name');
+  var body='Name: '+g('first-name')+' '+g('last-name')+'\nEmail: '+g('email')+'\nPhone: '+g('phone')+'\nInterest: '+g('interest')+'\n\n'+g('message');
+  window.location.href='mailto:springfieldonthemove@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+</script>
 </body>
 </html>
