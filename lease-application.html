@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lease Application | 100 River Street</title>
+
+  <!-- HIDDEN PAGE: not indexed, not in the sitemap, not linked from navigation.
+       Shared by link only, with tenants who are ready to move to a lease. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .app-section{padding-top:2.25rem;}
+    .app-section h2{font-size:1.35rem;margin-bottom:0.35rem;}
+    .app-section .sec-note{color:var(--medium-gray);font-size:0.9rem;margin-bottom:1.25rem;}
+    .app-rule{border:0;border-top:1px solid var(--light-gray);margin:2.25rem 0 0;}
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <a href="index.html">100 River <span class="logo-accent">Street</span></a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spaces.html">Spaces</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">Tenant Application</span>
+      <h1>Lease Application</h1>
+      <p>For tenants ready to move forward on a space at 100 River Street. This gives us what we need to prepare a lease. Most applicants finish it in 10–15 minutes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:860px;">
+
+      <div class="info-box fade-in" style="margin-bottom:2rem;">
+        <p><strong>Before you start.</strong> Have handy: your legal entity name and EIN, the space and term you want, two trade references, and your insurance agent's contact. Anything you don't know yet, leave blank &mdash; we'll fill the gaps together.</p>
+        <p style="margin-top:0.75rem;"><strong>We do not ask for Social Security numbers, bank account numbers, or card details on this form.</strong> If a personal credit check or personal financial statement is needed, we'll arrange that separately through a secure channel.</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="lease-app" novalidate>
+
+          <!-- 1. BUSINESS -->
+          <div class="app-section">
+            <h2>1. Business Information</h2>
+            <p class="sec-note">The entity that will sign the lease.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="legal-name">Legal business name <span aria-hidden="true">*</span></label>
+                <input type="text" id="legal-name" name="legal_business_name" required>
+              </div>
+              <div class="form-group">
+                <label for="dba">DBA / trade name</label>
+                <input type="text" id="dba" name="dba">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entity-type">Entity type</label>
+                <select id="entity-type" name="entity_type">
+                  <option value="">Select one...</option>
+                  <option>Sole proprietor</option>
+                  <option>LLC</option>
+                  <option>S Corporation</option>
+                  <option>C Corporation</option>
+                  <option>Partnership</option>
+                  <option>Non-profit / 501(c)(3)</option>
+                  <option>Government or municipal</option>
+                  <option>Not yet formed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="state-formed">State of formation</label>
+                <input type="text" id="state-formed" name="state_of_formation" placeholder="e.g. Vermont">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ein">EIN / Tax ID</label>
+                <input type="text" id="ein" name="ein" placeholder="XX-XXXXXXX">
+              </div>
+              <div class="form-group">
+                <label for="years">Years in business</label>
+                <input type="text" id="years" name="years_in_business">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="current-address">Current business address</label>
+                <input type="text" id="current-address" name="current_address">
+              </div>
+              <div class="form-group">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="business-desc">Describe your business</label>
+              <textarea id="business-desc" name="business_description" rows="3"></textarea>
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 2. CONTACT -->
+          <div class="app-section">
+            <h2>2. Primary Contact</h2>
+            <p class="sec-note">Who we work with day to day.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="contact_name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-title">Title</label>
+                <input type="text" id="contact-title" name="contact_title">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signatory">Who will sign the lease, and in what capacity?</label>
+              <input type="text" id="signatory" name="signatory" placeholder="Name, title (e.g. Jane Smith, Managing Member)">
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 3. SPACE -->
+          <div class="app-section">
+            <h2>3. Space &amp; Term Requested</h2>
+            <p class="sec-note">What you want to lease and for how long.</p>
+
+            <div class="form-group">
+              <label for="space-requested">Space(s) of interest</label>
+              <select id="space-requested" name="space_requested">
+                <option value="">Select one...</option>
+                <option>Great Hall storefront — West (5,184 SF)</option>
+                <option>Great Hall storefront — East (2,832 SF)</option>
+                <option>Riverfront restaurant (4,869 SF)</option>
+                <option>Warehouse open to rooftop (6,912 SF)</option>
+                <option>Rooftop area (4,608 SF)</option>
+                <option>Gym / recreation space (8,100 SF)</option>
+                <option>Warehouse — along alley (14,016 SF)</option>
+                <option>Former production space (10,305 SF)</option>
+                <option>Warehouse — rear (9,215 SF)</option>
+                <option>Carriage House — lower bays (2,430 SF)</option>
+                <option>First-floor riverfront space (1,859 SF)</option>
+                <option>Boiler Building with loft (1,833 SF)</option>
+                <option>Wellness suite (1,330 SF)</option>
+                <option>Former Visiting Nurse suite (1,310 SF)</option>
+                <option>Great Hall — event use</option>
+                <option>Combination / other — described below</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sf-needed">Square footage needed</label>
+                <input type="text" id="sf-needed" name="square_footage_needed">
+              </div>
+              <div class="form-group">
+                <label for="term">Desired lease term</label>
+                <select id="term" name="desired_term">
+                  <option value="">Select one...</option>
+                  <option>1 year</option>
+                  <option>2 years</option>
+                  <option>3 years</option>
+                  <option>5 years</option>
+                  <option>10 years</option>
+                  <option>Month to month</option>
+                  <option>Open to discussion</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="commence">Target commencement date</label>
+                <input type="date" id="commence" name="target_commencement">
+              </div>
+              <div class="form-group">
+                <label for="renewal">Renewal options wanted?</label>
+                <select id="renewal" name="renewal_options">
+                  <option value="">Select one...</option>
+                  <option>Yes — one 5-year option</option>
+                  <option>Yes — two 5-year options</option>
+                  <option>Yes — other (described below)</option>
+                  <option>No</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 4. USE -->
+          <div class="app-section">
+            <h2>4. Intended Use &amp; Operations</h2>
+            <p class="sec-note">How the space will actually be used. This drives permitting, insurance and the use clause.</p>
+
+            <div class="form-group">
+              <label for="use-desc">Describe the intended use in detail <span aria-hidden="true">*</span></label>
+              <textarea id="use-desc" name="intended_use" rows="4" required placeholder="What happens in the space day to day."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="hours">Hours of operation</label>
+                <input type="text" id="hours" name="hours_of_operation" placeholder="e.g. Mon–Sat 7am–7pm">
+              </div>
+              <div class="form-group">
+                <label for="employees">Number of employees on site</label>
+                <input type="text" id="employees" name="employees_on_site">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="visitors">Customers / visitors per day</label>
+                <input type="text" id="visitors" name="visitors_per_day">
+              </div>
+              <div class="form-group">
+                <label for="parking">Parking spaces needed</label>
+                <input type="text" id="parking" name="parking_needed">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="deliveries">Deliveries, loading or vehicle needs</label>
+              <input type="text" id="deliveries" name="deliveries" placeholder="Frequency, truck size, dock or grade-level access">
+            </div>
+
+            <div class="form-group">
+              <label for="hazmat">Will you store or use any chemicals, solvents, fuels or regulated materials?</label>
+              <textarea id="hazmat" name="hazardous_materials" rows="2" placeholder="If yes, describe. If no, write 'None'."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="signage">Signage you'll want</label>
+              <input type="text" id="signage" name="signage">
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 5. BUILD-OUT -->
+          <div class="app-section">
+            <h2>5. Build-Out &amp; Utilities</h2>
+            <p class="sec-note">What the space needs before you can open.</p>
+
+            <div class="form-group">
+              <label for="improvements">Improvements or alterations needed</label>
+              <textarea id="improvements" name="improvements_needed" rows="3" placeholder="Walls, flooring, restrooms, kitchen, HVAC, lighting..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="who-builds">Who would perform the work?</label>
+                <select id="who-builds" name="who_performs_work">
+                  <option value="">Select one...</option>
+                  <option>Landlord</option>
+                  <option>Tenant</option>
+                  <option>Shared / to be negotiated</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ti">Tenant improvement allowance requested?</label>
+                <select id="ti" name="ti_allowance_requested">
+                  <option value="">Select one...</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Open to discussion</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="utilities">Special power, water, venting, drainage or floor-load requirements</label>
+              <textarea id="utilities" name="special_utilities" rows="2" placeholder="e.g. 3-phase power, floor drains, grease trap, heavy equipment loads"></textarea>
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 6. REFERENCES -->
+          <div class="app-section">
+            <h2>6. References</h2>
+            <p class="sec-note">Names and contacts only &mdash; please don't enter account numbers.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bank-ref">Bank reference — institution</label>
+                <input type="text" id="bank-ref" name="bank_reference_institution">
+              </div>
+              <div class="form-group">
+                <label for="bank-contact">Bank reference — contact &amp; phone</label>
+                <input type="text" id="bank-contact" name="bank_reference_contact">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="trade1">Trade reference 1 — name &amp; phone</label>
+                <input type="text" id="trade1" name="trade_reference_1">
+              </div>
+              <div class="form-group">
+                <label for="trade2">Trade reference 2 — name &amp; phone</label>
+                <input type="text" id="trade2" name="trade_reference_2">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="landlord-ref">Current or prior landlord — name &amp; phone</label>
+                <input type="text" id="landlord-ref" name="landlord_reference">
+              </div>
+              <div class="form-group">
+                <label for="financials">Can you provide financial statements or tax returns on request?</label>
+                <select id="financials" name="can_provide_financials">
+                  <option value="">Select one...</option>
+                  <option>Yes</option>
+                  <option>Yes, with an NDA</option>
+                  <option>No</option>
+                  <option>New business — no history yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guarantor">Proposed guarantor, if any (name &amp; relationship to the business)</label>
+              <input type="text" id="guarantor" name="proposed_guarantor" placeholder="We'll collect any personal financial detail separately and securely.">
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 7. INSURANCE -->
+          <div class="app-section">
+            <h2>7. Insurance</h2>
+            <p class="sec-note">Tenants carry general liability and name the landlord as additional insured.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="carrier">Insurance carrier</label>
+                <input type="text" id="carrier" name="insurance_carrier">
+              </div>
+              <div class="form-group">
+                <label for="agent">Agent name &amp; phone</label>
+                <input type="text" id="agent" name="insurance_agent">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="coi">Can you provide a certificate of insurance before occupancy?</label>
+              <select id="coi" name="can_provide_coi">
+                <option value="">Select one...</option>
+                <option>Yes</option>
+                <option>Need guidance on requirements</option>
+                <option>Not yet insured</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 8. ANYTHING ELSE -->
+          <div class="app-section">
+            <h2>8. Anything Else</h2>
+            <div class="form-group">
+              <label for="notes">Questions, conditions, or anything we should know</label>
+              <textarea id="notes" name="additional_notes" rows="3"></textarea>
+            </div>
+          </div>
+
+          <hr class="app-rule">
+
+          <!-- 9. CERTIFY -->
+          <div class="app-section">
+            <h2>9. Certification</h2>
+            <div class="form-group" style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <input type="checkbox" id="certify" name="certified" required style="width:auto;margin-top:0.3rem;">
+              <label for="certify" style="font-weight:400;line-height:1.5;">
+                I certify that the information above is true and complete to the best of my knowledge, and I am authorized to submit it on behalf of the business named. I understand this application is not a lease and does not reserve space. <span aria-hidden="true">*</span>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sig-name">Type your full name as signature <span aria-hidden="true">*</span></label>
+                <input type="text" id="sig-name" name="signature_name" required>
+              </div>
+              <div class="form-group">
+                <label for="sig-date">Date <span aria-hidden="true">*</span></label>
+                <input type="date" id="sig-date" name="signature_date" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- spam trap -->
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <label for="company-url">Do not fill this in</label>
+            <input type="text" id="company-url" name="company_url" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div id="form-error" role="alert" style="display:none;background:#FDECEC;border-left:4px solid #C0392B;padding:0.85rem 1rem;margin:1.5rem 0 1rem;border-radius:4px;font-size:0.92rem;"></div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1.75rem;">Submit Application</button>
+          <p style="font-size:0.82rem;color:var(--medium-gray);margin-top:0.9rem;text-align:center;">Submitted directly to the ownership and leasing team. Not shared outside it.</p>
+        </form>
+
+        <div id="form-success" style="display:none;text-align:center;padding:2.5rem 1rem;">
+          <div style="font-size:2.6rem;line-height:1;">&#9989;</div>
+          <h3 style="margin:1rem 0 0.5rem;">Application received.</h3>
+          <p style="color:var(--slate);">It's with the ownership and leasing team now. Expect to hear back within three business days &mdash; sooner if we already know the space you want.</p>
+          <p style="margin-top:1.25rem;">Questions in the meantime? Call Vanessa at <a href="tel:+18028851527"><strong>(802) 885-1527</strong></a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:0;">
+        <span>&copy; 2026 100 River Street Venture, LLC. All rights reserved.</span>
+        <span>Managed by <a href="https://cedarwam.com" target="_blank" rel="noopener">Cedarwood Asset Management</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    document.getElementById('sig-date').value = new Date().toISOString().slice(0,10);
+    initRiverForm({formId:'lease-app', kind:'LEASE APPLICATION'});
+  </script>
+</body>
+</html>
